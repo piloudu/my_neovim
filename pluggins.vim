@@ -11,10 +11,15 @@ set rtp +=~/.vim
 " Now I call the plugins
 call plug#begin('~/.config/nvim/plugged') " ('~/.vim/plugged')
 Plug 'preservim/nerdtree' " File navigator
+Plug 'PhilRunninger/nerdtree-visual-selection' " Visual selection for NerdTree
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " junegunn/fzf is a file searcher (BetaTech)
 Plug 'junegunn/fzf.vim'
+
 Plug 'easymotion/vim-easymotion' " searching patterns in file
+
 Plug 'christoomey/vim-tmux-navigator' " window navigation wit crtl
+
 " Plug 'jupyter-vim/jupyter-vim'
 Plug 'vim-airline/vim-airline' " nvim downbar plugin
 Plug 'lervag/vimtex' "Plugin for Latex
@@ -29,6 +34,10 @@ call plug#end()
 " Help: https://jdhao.github.io/2018/09/10/nerdtree_usage/
 
 "  P L U G I N  C O N F I G U R A T I O N
+
+" FZF
+" -------
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0) " Disable file matching when using :Rg finding tool
 
 " Kite
 " -------
