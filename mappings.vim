@@ -18,13 +18,14 @@ nmap <Leader>esm <Plug>(easymotion-s2)
 
 " NerdTree pluggin
 nmap <Leader>nth :NERDTree<cr>| " Shortcut to NERDTree
-nmap <Leader>ntx :NERDTreeFromBookmark xoan<cr>| " NERDTree from marker xoan
+nmap <Leader>ntr :NERDTreeFromBookmark xoan<cr>| " NERDTree from marker xoan
 nmap <Leader>ntm :NERDTreeFromBookmark Master<cr>| " Shortcut to Master folder
 " nmap <Leader>h :help NERDTree<cr>216j | " Display NERDTree help in the command section
 
 " FZF pluggin
-nmap <Tab><Tab> :Files ~<cr>| " Search files from ~
-nmap <Leader>fzh :Files<cr>| " Search files from .
+nmap <Tab><Tab> :Files<cr>| " Search files from .
+nmap <Leader>fzr :Files ~<cr>| " Search files from ~
+nmap <Leader>fzm :Files /Users/xoan/Desktop/Fisica/Máster<cr>| " Search files from .
 nmap <Leader>fzs :Rg<cr>| " Search pattern 
 
 " COC plugin
