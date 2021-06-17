@@ -6,12 +6,13 @@ nmap <Leader>qq :q<Enter>| " Quit file
 nmap <Leader>wq :wq<Enter>| " Save and quit file
 nmap <Leader>w :w<Enter>| " Save file
 nmap ss :noh<Enter>| " Undo highlinghting after search
-nmap <Leader>j <C-w>w| " Swipe window
 nmap <Leader>t :! | " Enter Terminal mode
 nmap <Leader>o o<Esc>| " Insert line below and stay normal mode.
 nmap <Leader>O O<Esc>| " Insert line below and stay normal mode.
 nmap <expr> <Leader>m ":'" . input("Marker: ") . "<Enter>"| " Move to the specified marker
 nmap <Leader>i i<space><esc>| " insert space before cursor
+
+nmap <Leader>esm <Plug>(easymotion-s2)
 
 nmap <Leader>nth :NERDTree<Enter>| " Shortcut to NERDTree
 nmap <Leader>ntx :NERDTreeFromBookmark xoan<Enter>| " NERDTree from marker xoan

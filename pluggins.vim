@@ -13,6 +13,8 @@ call plug#begin('~/.config/nvim/plugged') " ('~/.vim/plugged')
 Plug 'preservim/nerdtree' " File navigator
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " junegunn/fzf is a file searcher (BetaTech)
 Plug 'junegunn/fzf.vim'
+Plug 'easymotion/vim-easymotion' " searching patterns in file
+Plug 'christoomey/vim-tmux-navigator' " window navigation wit crtl
 " Plug 'jupyter-vim/jupyter-vim'
 Plug 'vim-airline/vim-airline' " nvim downbar plugin
 Plug 'lervag/vimtex' "Plugin for Latex
