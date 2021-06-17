@@ -46,18 +46,18 @@ nmap <expr> <Leader>srh ":" . "s/" . input("Search: ") . "/" . input("Replace: "
 nmap <expr> <Leader>sre ":,$s/" . input("Search: ") . "/" . input("Replace: ") . "/gc" . "<cr>"| " Search and replace from current line to EOF
 
 " Comment and uncomment
-nmap <Leader>cmh 0i#<Esc>| " Comment the current line
+nmap <Leader>cmt 0i#<Esc>| " Comment the current line
 nmap <Leader>cme 0<C-v>GI#<Esc>| " Comment till the end of file
 nmap <expr> <Leader>cml "0<C-v>" . input("End line: ") . "jI#<Esc>"| " Comment from current line to selected line
-nmap <Leader>uch 0x| " Uncomment the current line
+nmap <Leader>uct 0x| " Uncomment the current line
 nmap <Leader>uce 0<C-v>Gx| " Uncomment till the end of file
 nmap <expr> <Leader>ucl "0<C-v>" . input("End line: ") . "jx"| " Uncomment from current line to selected line
 
 " Tabulate and untabulate
-nmap <Leader>tbh 0i<Tab><Esc>| " Tabulate the current line
+nmap <Leader>tbt 0i<Tab><Esc>| " Tabulate the current line
 nmap <Leader>tbe 0<C-v>GI<Tab><Esc>| " Tabulate till EOF
 nmap <expr> <Leader>tbl "0<C-v>" . input("End line: ") . "jI<Tab><Esc>"| " Tabulate the specified lines
-nmap <Leader>uth 0<C-v>3lx| " Untabulate the current line
+nmap <Leader>utt 0<C-v>3lx| " Untabulate the current line
 nmap <Leader>ute 0<C-v>G3lx| " Untabulate till EOF
 nmap <expr> <Leader>utl "0<C-v>" . input("End line: ") . "j3lx"| " Untabulate the specificed lines
 
