@@ -7,11 +7,12 @@ nmap <Leader>qq :q<cr>| " Quit file
 nmap <Leader>wq :wq<cr>| " Save and quit file
 nmap <Leader>w :w<cr>| " Save file
 nmap <Leader>ss :noh<cr>| " Undo highlinghting after search
-nmap <Leader>t :! | " cr Terminal mode
+nmap <Leader>ter :! | " cr Terminal mode
 nmap <Leader>o o<Esc>| " Insert line below and stay normal mode.
 nmap <Leader>O O<Esc>| " Insert line below and stay normal mode.
 nmap <expr> <Leader>m ":'" . input("Marker: ") . "<cr>"| " Move to the specified marker
-nmap <Leader>i i<space><esc>| " insert space before cursor
+nmap <Leader>i i<space><esc>| " Insert space before cursor
+nmap <Leader>srf :browse oldfiles<cr>| " Browse a file in the recently opened
 
 " Easymotion pluggin
 nmap <Leader>esm <Plug>(easymotion-s2)
