@@ -34,6 +34,7 @@ set shiftwidth=4  " Four spaces for <Tab>
 set tabstop=4
 set expandtab
 set autoindent  " Preserves the indentation of the upper line when press <Return>
+set encoding=UTF-8
 filetype indent on
 
 
