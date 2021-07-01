@@ -10,7 +10,8 @@ set rtp +=~/.vim
 
 " Now I call the plugins
 call plug#begin('~/.config/nvim/plugged') " ('~/.vim/plugged')
-Plug 'preservim/nerdtree' " File navigator
+Plug 'preservim/nerdtree' " NerdTree
+Plug 'ryanoasis/vim-devicons' " Add icons to NerdTree
 Plug 'PhilRunninger/nerdtree-visual-selection' " Visual selection for NerdTree
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " junegunn/fzf is a file searcher (BetaTech)
@@ -33,7 +34,8 @@ call plug#end()
 " NerdTree: https://github.com/preservim/nerdtree
 " Help: https://jdhao.github.io/2018/09/10/nerdtree_usage/
 
-"  P L U G I N  C O N F I G U R A T I O N
+
+" ==========  P L U G I N  C O N F I G U R A T I O N ===========
 
 " FZF
 " -------
@@ -53,6 +55,7 @@ let g:kite_tab_complete=1 | "Allow autocompletions with Tab
 " NERDTree
 " -------
 let NERDTreeShowHidden=1
+let g:NERDTreeWinSize=60
 
 " coc-vim
 " -------
