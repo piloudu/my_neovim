@@ -27,6 +27,7 @@ set relativenumber  " (relativenumber) to view relative number lines and (relati
 set incsearch
 let g:python_host_prog="/usr/local/bin/python3.9" | " Activate python with nvim
 
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown| " Highlight for .md files
 
 " # ============ T A B S ============ #
 
