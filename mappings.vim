@@ -104,4 +104,4 @@ autocmd FileType tex nmap <space>beq i\begin{equation}<CR>\end{equation}<ESC>O
 autocmd FileType tex nmap <expr> <space>bel 'i\begin{equation}<space>\label{eq' . input("Eq. number : ") . '}<CR>\end{equation}<ESC>O'
 
 " Begin figure
-autocmd FileType tex nmap <expr> <space>bf 'i\begin{figure}[h!]<CR>\centering<CR>\includegraphics[scale = ' . input("Scale : ") . ']{}<CR>\caption{}<CR>\label{}<CR>\end{figure}<ESC>'
+autocmd FileType tex nmap <expr> <space>bf 'i\begin{figure}[h!]<CR>\centering<CR>\includegraphics[scale = ' . input("Scale : ") . ']{}<CR>\caption{}<CR>\label{}<CR>\end{figure}<ESC>3k$i'
