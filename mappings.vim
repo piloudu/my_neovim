@@ -3,11 +3,11 @@ let mapleader = " "
 
 " ============ N O R M A L   M O D E ===============
 " Basic mappings
-nmap <Leader>qq :q<cr>| " Quit file
-nmap <Leader>wq :wq<cr>| " Save and quit file
-nmap <Leader>w :w<cr>| " Save file
-nmap <Leader>ss :noh<cr>| " Undo highlinghting after search
-nmap <Leader>ter :! | " cr Terminal mode
+" nmap <Leader>qq :q<cr>| " Quit file
+" nmap <Leader>wq :wq<cr>| " Save and quit file
+" nmap <Leader>w :w<cr>| " Save file
+" nmap <Leader>ss :noh<cr>| " Undo highlinghting after search
+" nmap <Leader>ter :! | " cr Terminal mode
 nmap <Leader>o o<Esc>| " Insert line below and stay normal mode.
 nmap <Leader>O O<Esc>| " Insert line below and stay normal mode.
 nmap <expr> <Leader>m ":'" . input("Marker: ") . "<cr>"| " Move to the specified marker
@@ -104,4 +104,4 @@ autocmd FileType tex nmap <space>beq i\begin{equation}<CR>\end{equation}<ESC>O
 autocmd FileType tex nmap <expr> <space>bel 'i\begin{equation}<space>\label{eq' . input("Eq. number : ") . '}<CR>\end{equation}<ESC>O'
 
 " Begin figure
-autocmd FileType tex nmap <expr> <space>bf 'i\begin{figure}[h!]<CR>\centering<CR>\includegraphics[width = ' . input("Width : ") . '\linewidth, height = ' . input("Height (cm) : ") . 'cm]{}<CR>\caption{}<CR>\label{}<CR>\end{figure}<ESC>'
+autocmd FileType tex nmap <expr> <space>bf 'i\begin{figure}[h!]<CR>\centering<CR>\includegraphics[scale = ' . input("Scale : ") . ']{}<CR>\caption{}<CR>\label{}<CR>\end{figure}<ESC>'
