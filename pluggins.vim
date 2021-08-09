@@ -43,7 +43,7 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-hea
 
 " Kite
 " -------
-let g:kite_supported_languages = ['python', 'javascript', 'go']
+let g:kite_supported_languages = ['python', 'cpp', 'javascript', 'go', 'html']
 let g:kite_tab_complete=1 | "Allow autocompletions with Tab
 
 " Latex-suite (vim-latex)
@@ -56,6 +56,11 @@ let g:kite_tab_complete=1 | "Allow autocompletions with Tab
 " -------
 let NERDTreeShowHidden=1
 let g:NERDTreeWinSize=60
+
+" VimTex
+" -------
+let g:vimtex_quickfix_mode=0
+
 
 " coc-vim
 " -------
