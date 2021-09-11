@@ -39,6 +39,12 @@ autocmd FileType python nmap <Leader>pp :w<cr>:!python %<cr>| " Run file in pyth
 autocmd FileType python nmap <Leader>PP :w<cr>:term python '%:p'<cr>| " Run file in python3 with available prompt
 "autocmd FileType python nmap <Leader>ph :w!<cr>Vgg:term python '%:p'<cr>| " Run the selected lines in python
 
+" Run file in Java
+autocmd FileType java nmap <Leader>pp :w<cr>:!java %<cr>
+" Compile and run the script. Useful when the first class doesn't have the main method. The file must have the same name as the class that contains the main method.
+autocmd FileType java nmap <Leader>pc :w<cr>:!javac %<cr>:! java %:r<cr>
+autocmd FileType java nmap <Leader>PP :w<cr>:term java '%:p'<cr>
+
 " Search and replace
 nmap <expr> <Leader>sra ":%s/" . input("Search: ") . "/" . input("Replace: ") . "/gc" . "<cr>"| " Search for given text and replace with next given text in the hole file. (The . concatenates functions)
 nmap <expr> <Leader>srl ":" . input("First line: ") . "," . input("Last line: ") . "s/" . input("Search: ") . "/" . input("Replace: ") . "/gc" . "<cr>"| " Search for given text and replace with next given text in the specified lines

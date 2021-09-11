@@ -43,7 +43,7 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-hea
 
 " Kite
 " -------
-let g:kite_supported_languages = ['python', 'cpp', 'javascript', 'go', 'html']
+let g:kite_supported_languages = ['python', 'cpp', 'java', 'javascript', 'go', 'html']
 let g:kite_tab_complete=1 | "Allow autocompletions with Tab
 
 " Latex-suite (vim-latex)
@@ -62,7 +62,7 @@ let g:NERDTreeWinSize=60
 let g:vimtex_quickfix_mode=0
 
 
-" coc-vim
+" coc-nvim
 " -------
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
@@ -76,6 +76,11 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+
+" Disable coc-nvim autocompletion for javascript files
+autocmd FileType javascript let b:coc_suggest_disable = 1
+
+
 
 " Airline
 " -------
