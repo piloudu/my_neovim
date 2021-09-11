@@ -42,7 +42,7 @@ autocmd FileType python nmap <Leader>PP :w<cr>:term python '%:p'<cr>| " Run file
 " Run file in Java
 autocmd FileType java nmap <Leader>pp :w<cr>:!java %<cr>
 " Compile and run the script. Useful when the first class doesn't have the main method. The file must have the same name as the class that contains the main method.
-autocmd FileType java nmap <Leader>pc :w<cr>:!javac %<cr>:! java %:r<cr>
+autocmd FileType java nmap <Leader>pc :w<cr>:!javac % && java %:r<cr>
 autocmd FileType java nmap <Leader>PP :w<cr>:term java '%:p'<cr>
 
 " Search and replace
