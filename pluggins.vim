@@ -21,6 +21,10 @@ Plug 'easymotion/vim-easymotion' " searching patterns in file
 
 Plug 'christoomey/vim-tmux-navigator' " window navigation wit crtl
 
+Plug 'sheerun/vim-polyglot' " kotlin highligh
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " Markdown preview
+
 " Plug 'jupyter-vim/jupyter-vim'
 Plug 'vim-airline/vim-airline' " nvim downbar plugin
 Plug 'lervag/vimtex' "Plugin for Latex

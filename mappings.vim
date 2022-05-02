@@ -10,12 +10,16 @@ let mapleader = " "
 " nmap <Leader>ter :! | " cr Terminal mode
 nmap <Leader>o o<Esc>| " Insert line below and stay normal mode.
 nmap <Leader>O O<Esc>| " Insert line below and stay normal mode.
-nmap <expr> <Leader>m ":'" . input("Marker: ") . "<cr>"| " Move to the specified marker
+" nmap <expr> <Leader>m ":'" . input("Marker: ") . "<cr>"| " Move to the specified marker
 nmap <Leader>i i<space><esc>| " Insert space before cursor
 nmap <Leader>srf :browse oldfiles<cr>| " Browse a file in the recently opened
+nmap <Leader>mp :MarkdownPreview| " MarkdownPreview in browser
 
 " Easymotion pluggin
 nmap <Leader>esm <Plug>(easymotion-s2)
+
+" Trigger documentation on Kite Copilot of the function below the cursor
+nmap <silent> <buffer> <space>kd <Plug>(kite-docs)
 
 " NerdTree pluggin
 nmap <Leader>nth :NERDTree<cr>| " Shortcut to NERDTree
@@ -72,7 +76,7 @@ nmap <expr> <Leader>utl "0<C-v>" . input("End line: ") . "j3lx"| " Untabulate th
 " ============ I N S E R T   M O D E ===============
 imap <C-j> <C-p>| " Used to move up and down in Kite completions
 imap Ñ <cr>| " New line
-:imap ,, <Esc>| " Redefine ',,' as the 'Esc' key:
+imap ,, <Esc>| " Redefine ',,' as the 'Esc' key:
 
 " ============ V I S U A L   M O D E ===============
 xnoremap <space>p :w !python<cr>| " Run the selected lines in python (visual mode).
@@ -88,11 +92,23 @@ xnoremap <space>i I<space><esc>| " insert a space before cursor
 " Compile
 autocmd FileType tex nmap <expr> <space>pp ':w<cr>\ll'
 
+" Move left, right, up and down in insert mode:
+autocmd filetype tex imap <c-b> <Left>
+autocmd filetype tex imap <c-f> <Right>
+autocmd filetype tex imap <c-p> <Up>
+autocmd filetype tex imap <c-n> <Down>
+
+" Italics in insert mode:
+autocmd filetype tex imap <c-t><c-i><c-t> \textit{}<Esc>i
+
+" Blackfont in insert mode:
+autocmd filetype tex imap <c-t><c-b><c-f> \textbf{}<Esc>i
+
 " Insert {} after <This>
-autocmd FileType tex imap <C-b><C-r> {}<Esc>i
+autocmd filetype tex imap <c-b><c-r> {}<esc>i
 
 " Insert {}{} after <This>
-autocmd FileType tex imap <C-b><C-b><C-r><C-r> {}{}<Esc>2hi
+" autocmd FileType tex imap <C-b><C-b><C-r><C-r> {}{}<Esc>2hi
 
 " Autoinsert $$ when $ is used
 autocmd FileType tex inoremap $ $$<Esc>i

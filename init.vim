@@ -17,7 +17,6 @@
 source $HOME/.config/nvim/mappings.vim
 source $HOME/.config/nvim/pluggins.vim
 
-set nocompatible  " Disables this settings in VI
 syntax enable  " Sets syntax colors visibles
 colorscheme dracula
 set mouse=r " (a) Allows the mouse to select and change the cursor position and (r) disaables this function
@@ -37,6 +36,14 @@ set expandtab
 set autoindent  " Preserves the indentation of the upper line when press <Return>
 set encoding=UTF-8
 filetype indent on
+
+" Add NOTE to highlighted nvim keywords
+augroup vimrc_todo
+    au!
+    au Syntax * syn match MyTodo /\v<(FIXME|NOTE|TODO|OPTIMIZE|XXX):/
+          \ containedin=.*Comment,vimCommentTitle
+augroup END
+hi def link MyTodo Todo
 
 
 " " Shortcut to display information about the function under the cursor in
