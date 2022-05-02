@@ -13,7 +13,7 @@ nmap <Leader>O O<Esc>| " Insert line below and stay normal mode.
 " nmap <expr> <Leader>m ":'" . input("Marker: ") . "<cr>"| " Move to the specified marker
 nmap <Leader>i i<space><esc>| " Insert space before cursor
 nmap <Leader>srf :browse oldfiles<cr>| " Browse a file in the recently opened
-nmap <Leader>mp :MarkdownPreview| " MarkdownPreview in browser
+nmap <Leader>mp :MarkdownPreview<cr>| " MarkdownPreview in browser
 
 " Easymotion pluggin
 nmap <Leader>esm <Plug>(easymotion-s2)
