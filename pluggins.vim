@@ -47,8 +47,8 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-hea
 
 " Kite
 " -------
-let g:kite_supported_languages = ['python', 'cpp', 'java', 'javascript', 'go', 'html']
-let g:kite_tab_complete=1 | "Allow autocompletions with Tab
+" let g:kite_supported_languages = ['python', 'cpp', 'java', 'javascript', 'go', 'html']
+" let g:kite_tab_complete=1 | "Allow autocompletions with Tab
 
 " Latex-suite (vim-latex)
 " -------
