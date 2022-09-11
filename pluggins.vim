@@ -68,21 +68,21 @@ let g:vimtex_quickfix_mode=0
 
 " coc-nvim
 " -------
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-let g:coc_snippet_next = '<tab>'
+"inoremap <silent><expr> <TAB>
+"      \ pumvisible() ? coc#_select_confirm() :
+"      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+"      \ <SID>check_back_space() ? "\<TAB>" :
+"      \ coc#refresh()
+"
+"function! s:check_back_space() abort
+"  let col = col('.') - 1
+"  return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
+"
+"let g:coc_snippet_next = '<tab>'
 
 " Disable coc-nvim autocompletion for javascript files
-autocmd FileType javascript let b:coc_suggest_disable = 1
+" autocmd FileType javascript let b:coc_suggest_disable = 1
 
 
 
@@ -102,3 +102,9 @@ let g:airline_theme='dracula'
 " \   'python': ['black', 'isort'],
 " \} " fixers (conditions bond to * apply to every type of file)
 " let g:ale_fix_on_save = 1
+
+
+" MarkdownPreview
+" -------
+let g:mkdp_highlight_css = '/Users/xoangonzaleziglesias/.config/nvim/plugged/markdown-preview.nvim/node_modules/highlight.js/styles/androidstudio.css'
+let g:mkdp_theme = 'dark' |" Set the default theme to dark
