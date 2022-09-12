@@ -28,6 +28,8 @@ let g:python_host_prog="/usr/local/bin/python3.9" | " Activate python with nvim
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown| " Highlight for .md files
 
+setlocal spell spelllang=en_us " Switch on spell checking with english language
+
 " # ============ T A B S ============ #
 
 set shiftwidth=4  " Four spaces for <Tab>
