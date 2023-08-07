@@ -3,9 +3,6 @@ let mapleader = " "
 
 " ============ N O R M A L   M O D E ===============
 " Basic mappings
-" nmap <Leader>qq :q<cr>| " Quit file
-" nmap <Leader>wq :wq<cr>| " Save and quit file
-" nmap <Leader>w :w<cr>| " Save file
 " nmap <Leader>ss :noh<cr>| " Undo highlinghting after search
 " nmap <Leader>ter :! | " cr Terminal mode
 nmap <Leader>o o<Esc>| " Insert line below and stay normal mode.
@@ -14,6 +11,7 @@ nmap <Leader>O O<Esc>| " Insert line below and stay normal mode.
 nmap <Leader>i i<space><esc>| " Insert space before cursor
 nmap <Leader>srf :browse oldfiles<cr>| " Browse a file in the recently opened
 nmap <Leader>mp :MarkdownPreview<cr>| " MarkdownPreview in browser
+nmap <Leader>ct 1z=
 
 " Easymotion pluggin
 nmap <Leader>esm <Plug>(easymotion-s2)
@@ -36,6 +34,8 @@ nmap <Leader>fzs :Rg<cr>| " Search pattern
 " COC plugin
 nmap <space>cs :CocSearch | " Search pattern with CocSearch
 
+" Markdown mappings
+autocmd FileType Markdown nmap <Leader>bs i&nbsp;<Esc>|" Introduce a blank space
 
 " Run file in python
 autocmd FileType python nmap <Leader>pp :w<cr>:!python %<cr>| " Run file in python3
@@ -77,6 +77,11 @@ nmap <expr> <Leader>utl "0<C-v>" . input("End line: ") . "j3lx"| " Untabulate th
 imap <C-j> <C-p>| " Used to move up and down in Kite completions
 imap Ñ <cr>| " New line
 imap ,, <Esc>| " Redefine ',,' as the 'Esc' key:
+
+" Use coc-nvim autocompletion with TAB
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 " ============ V I S U A L   M O D E ===============
 xnoremap <space>p :w !python<cr>| " Run the selected lines in python (visual mode).
@@ -127,3 +132,7 @@ autocmd FileType tex nmap <expr> <space>bel 'i\begin{equation}<space>\label{eq' 
 
 " Begin figure
 autocmd FileType tex nmap <expr> <space>bf 'i\begin{figure}[h!]<CR>\centering<CR>\includegraphics[scale = ' . input("Scale : ") . ']{}<CR>\caption{}<CR>\label{}<CR>\end{figure}<ESC>3k$i'
+
+" Cellular automaton plugin (useless animations)
+nmap <Leader>animr :CellularAutomaton make_it_rain<cr>
+nmap <Leader>animg :CellularAutomaton game_of_life<cr>

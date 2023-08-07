@@ -28,7 +28,7 @@ let g:python_host_prog="/usr/local/bin/python3.9" | " Activate python with nvim
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown| " Highlight for .md files
 
-setlocal spell spelllang=en_us " Switch on spell checking with english language
+setlocal spell spelllang=en_us " Switch on spell checking with English language
 
 " # ============ T A B S ============ #
 
