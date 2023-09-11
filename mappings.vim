@@ -34,8 +34,15 @@ nmap <Leader>fzs :Rg<cr>| " Search pattern
 " COC plugin
 nmap <space>cs :CocSearch | " Search pattern with CocSearch
 
-" Markdown mappings
-autocmd FileType Markdown nmap <Leader>bs i&nbsp;<Esc>|" Introduce a blank space
+" ---- Markdown mappings ----
+" Insert a blank space
+autocmd FileType Markdown nmap <Leader>bs i&nbsp;<Esc>
+" Insert note text (green)
+autocmd FileType Markdown nmap <Leader>nt i <span style="color:#008008"></span><Esc>bhhi
+" Insert alert text (yellow)
+autocmd FileType Markdown nmap <Leader>at i <span style="color:#B9A500"></span><Esc>bhhi
+" Insert error text (yellow)
+autocmd FileType Markdown nmap <Leader>et i <span style="color:#A41D00"></span><Esc>bhhi
 
 " Run file in python
 autocmd FileType python nmap <Leader>pp :w<cr>:!python %<cr>| " Run file in python3
