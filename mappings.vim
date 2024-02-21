@@ -93,6 +93,7 @@ inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 xnoremap <space>p :w !python<cr>| " Run the selected lines in python (visual mode).
 xnoremap <space>pp :w!<cr>:term python '%:p'<cr>| " Run the selected lines in python
 xnoremap <space>i I<space><esc>| " insert a space before cursor
+xmap / y/<C-r>"<CR>| " Search for the text selected on visual mode
 
 " ============ T E R M I N A L   M O D E ===============
 :tnoremap <Esc> <C-\><C-n>| " Allow to Esc the window popped using :term python using the insert shortcut to Esc.
