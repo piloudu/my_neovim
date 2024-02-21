@@ -34,9 +34,8 @@ nmap <Leader>fzs :Rg<cr>| " Search pattern
 " COC plugin
 nmap <space>cs :CocSearch | " Search pattern with CocSearch
 
-" ---- Markdown mappings ----
-" Insert a blank space
-autocmd FileType Markdown nmap <Leader>bs i&nbsp;<Esc>
+" Markdown mappings
+autocmd FileType Markdown nmap <Leader>bs i&nbsp;<Esc>|" Introduce a blank space
 " Insert note text (green)
 autocmd FileType Markdown nmap <Leader>nt i <span style="color:#008008"></span><Esc>bhhi
 " Insert alert text (yellow)
