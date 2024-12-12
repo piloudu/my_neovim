@@ -42,6 +42,8 @@ autocmd FileType Markdown nmap <Leader>nt i <span style="color:#008008"></span><
 autocmd FileType Markdown nmap <Leader>at i <span style="color:#B9A500"></span><Esc>bhhi
 " Insert error text (yellow)
 autocmd FileType Markdown nmap <Leader>et i <span style="color:#A41D00"></span><Esc>bhhi
+" Insert centered image
+autocmd FileType Markdown nmap <Leader>ci i<p style='text-align:center'><cr>  <img src="" width="400"><cr><Esc>i</p><Esc>k9li
 
 " Run file in python
 autocmd FileType python nmap <Leader>pp :w<cr>:!python %<cr>| " Run file in python3
