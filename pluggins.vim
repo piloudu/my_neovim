@@ -34,7 +34,6 @@ Plug 'dracula/vim', { 'name': 'dracula' } " dracula theme
 " Plug 'mhinz/neovim-remote' " remote terminal access inside nvim
 " Plug 'dense-analysis/ale' " syntax linting and fixing
 
-Plug 'eandrju/cellular-automaton.nvim' " Useless plugin that introduces animations
 call plug#end()
 
 " NerdTree: https://github.com/preservim/nerdtree

@@ -19,7 +19,7 @@ source $HOME/.config/nvim/pluggins.vim
 
 syntax enable  " Sets syntax colors visibles
 colorscheme dracula
-set mouse=r " (a) Allows the mouse to select and change the cursor position and (r) disaables this function
+set mouse=a " (a) Allows the mouse to select and change the cursor position and (r) disaables this function
 set clipboard=unnamedplus  " Allows to alternate between vim clipboard and general OS clipboard
 set number  " (number) to view linenumbers and (number!) to disable
 set relativenumber  " (relativenumber) to view relative number lines and (relativenumber!) to disable.
