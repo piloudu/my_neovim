@@ -86,10 +86,9 @@ imap <C-j> <C-p>| " Used to move up and down in Kite completions
 imap Ñ <cr>| " New line
 imap ,, <Esc>| " Redefine ',,' as the 'Esc' key:
 
-" Use coc-nvim autocompletion with TAB
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+" Use coc-nvim autocompletion with Shift+Tab
+inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 " ============ V I S U A L   M O D E ===============
 xnoremap <space>p :w !python<cr>| " Run the selected lines in python (visual mode).
