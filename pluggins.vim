@@ -28,7 +28,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " Markd
 " Plug 'jupyter-vim/jupyter-vim'
 Plug 'vim-airline/vim-airline' " nvim downbar plugin
 Plug 'lervag/vimtex' "Plugin for Latex
-Plug 'neoclide/coc.nvim' " coc-vim autocompletion
+Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'npm ci' }  " coc-vim autocompletion
 Plug 'dracula/vim', { 'name': 'dracula' } " dracula theme
 " Plug 'davidhalter/jedi-vim'
 " Plug 'mhinz/neovim-remote' " remote terminal access inside nvim
